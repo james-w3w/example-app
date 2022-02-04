@@ -1,11 +1,11 @@
-# bases:
-#   - ../../application
-# patches:
-#   - replica_count.yaml
+bases:
+  - ../../application
+patches:
+  - replica_count.yaml
 
-# configMapGenerator:
-# - name: example-config
-#   namespace: example
-#   #behavior: replace
-#   files:
-#     - configs/config.json
+configMapGenerator:
+- name: example-config
+  namespace: example
+  #behavior: replace
+  files:
+    - configs/config.json
