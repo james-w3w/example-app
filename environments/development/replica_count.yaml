@@ -4,4 +4,4 @@ metadata:
   name: example-deploy
   namespace: example
 spec:
-  replicas: 10
+  replicas: 3
