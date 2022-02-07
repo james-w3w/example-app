@@ -1,24 +1,25 @@
 bases:
   - ../../application
-  
+
 patches:
-- patch: |-
-    apiVersion: apps/v1
-    kind: Deployment
-    metadata:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: example-deploy
+        namespace: example
+      spec:
+        replicas: 10
+    target:
+      group: apps
+      version: v1
+      kind: Deployment
       name: example-deploy
       namespace: example
-    spec:
-      replicas: 10
-  target:
-    group: apps
-    version: v1
-    kind: Deployment
-    name: example
 
 configMapGenerator:
-- name: example-config
-  namespace: example
-  #behavior: replace
-  files:
-    - configs/config.json
+  - name: example-config
+    namespace: example
+    #behavior: replace
+    files:
+      - configs/config.json
