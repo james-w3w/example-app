@@ -9,7 +9,7 @@ patches:
         name: example-deploy
         namespace: example
       spec:
-        replicas: 10
+        replicas: 5
     target:
       group: apps
       version: v1
