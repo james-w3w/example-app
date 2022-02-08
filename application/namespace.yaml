@@ -2,3 +2,8 @@
 # kind: Namespace
 # metadata:
 #   name: example
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: example-dev
