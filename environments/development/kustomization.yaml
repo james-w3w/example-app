@@ -15,11 +15,11 @@ patches:
       version: v1
       kind: Deployment
       name: example-deploy
-      namespace: example
+      namespace: example-dev
 
 configMapGenerator:
   - name: example-config
-    namespace: example
+    namespace: example-dev
     #behavior: replace
     files:
       - configs/config.json
