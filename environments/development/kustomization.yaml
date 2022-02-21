@@ -7,7 +7,7 @@ patches:
       kind: Deployment
       metadata:
         name: example-deploy
-        namespace: example-dev
+        namespace: example
       spec:
         replicas: 5
     target:
@@ -15,11 +15,11 @@ patches:
       version: v1
       kind: Deployment
       name: example-deploy
-      namespace: example-dev
+      namespace: example
 
-configMapGenerator:
-  - name: example-config
-    namespace: example-dev
-    #behavior: replace
-    files:
-      - configs/config.json
+# configMapGenerator:
+#   - name: example-config
+#     namespace: example
+#     #behavior: replace
+#     files:
+#       - configs/config.json
